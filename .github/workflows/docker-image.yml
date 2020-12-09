@@ -14,6 +14,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Thirdparty
+      run: mkdir -p third_party && git clone https://github.com/salesforce/WikiSQL third_party/wikisql
     - name: Docker Login
       uses: docker/login-action@v1.6.0
       with:
